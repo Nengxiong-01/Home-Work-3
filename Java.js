@@ -10,9 +10,9 @@ async function getApi(){
         console.log(res)
         //javaScript [DOM]
         document.getElementById('time').innerText = res.time.updated
-        document.getElementById('usd').innerText = res.time.updated
-        document.getElementById('eur').innerText = res.time.updated
-
+        document.getElementById('usd').innerText = res.bpi.USD.rate
+        document.getElementById('eur').innerText = res.bpi.EUR.rate
+        document.getElementById('gbp').innerText = res.bpi.GBP.rate
     } catch (error) {
         console.error(error)
     }
